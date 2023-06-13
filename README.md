@@ -1,2 +1,2 @@
 # minesweeper-terminal
- Minesweeper game that can be played in the terminal.
+ Minesweeper game built in Python that can be played in the terminal.
