@@ -9,13 +9,7 @@ FLAG = -2
 def generate_grids():
     grid = []
     player_grid = []
-    size = int(input(f'How many rows and columns would you like your board to have? '))
-    while True:
-        if 12 >= size >= 5:
-            break
-        else:
-            size = int(input(f'Please input a valid number from 5 to 12: '))
-
+    size = get_size()
     for row in range(size):
         grid.insert(row, [])
         player_grid.insert(row, [])
@@ -24,6 +18,11 @@ def generate_grids():
             player_grid[row].insert(col, -1)
     return grid, player_grid, size
 
+def get_size():
+    while True:
+        size = int(input(f'How many rows and columns would you like your board to have? '))
+        if 5 <= size <= 12:
+            return size
 
 def difficulty_selection(size):
     difficulty = (input(f'What difficulty would you like? (Easy, Medium or Hard): ')).lower()
