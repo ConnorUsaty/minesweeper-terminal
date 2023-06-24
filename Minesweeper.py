@@ -23,6 +23,8 @@ def get_size():
         size = int(input(f'How many rows and columns would you like your board to have? '))
         if 5 <= size <= 12:
             return size
+        else:
+            print(f'Please ensure your input is between 5 and 12!')
 
 def difficulty_selection(size):
     difficulty = (input(f'What difficulty would you like? (Easy, Medium or Hard): ')).lower()
